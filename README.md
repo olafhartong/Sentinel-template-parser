@@ -7,5 +7,21 @@
 
 This small script converts all template rules obtained from the API to XLSX for easier reference.
 
-The JSON can be retrieved here: https://docs.microsoft.com/en-us/rest/api/securityinsights/alertruletemplates/list
+# Usage
 
+## Getting the data from the Microsoft API Manually
+* The JSON can be retrieved here: https://docs.microsoft.com/en-us/rest/api/securityinsights/alertruletemplates/list
+
+* Then run: ``` ./sentinel-template-parse.ps1```
+
+## Using AzSentinel
+
+Use the great AzSentinel by @pkhabazi and @wortell https://github.com/wortell/AZSentinel
+* Install and authenticate the module per the authors instructions
+
+* Edit the Workspace variable in azsentinel-template-parse.ps1
+
+* Then run: ``` ./azsentinel-template-parse.ps1```
+
+
+Both scripts update the xlsx file

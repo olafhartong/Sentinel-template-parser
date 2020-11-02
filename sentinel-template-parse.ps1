@@ -20,4 +20,4 @@ foreach ($object in $dataset)
         $Collection += $TotalObjects }
     }
 
-$Collection | Select-Object  @{Name ="ID"; Expression={$_.ID | Select-Object -Index 0 }},@{Name ="Name"; Expression={$_.Name -join ","}},@{Name="Platform";Expression={$_.'Platform' -join ","}},@{Name="DataType";Expression={$_.'DataType' -join ","}},@{Name="Tactic";Expression={$_.'Tactic' -join ","}},@{Name="Description";Expression={$_.'Description' -join ","}},@{Name="Query";Expression={$_.'Query' -join ","}} | Sort-Object ID | Export-Excel $Excelfile -WorksheetName Templates      
+$Collection | Select-Object  @{Name ="ID"; Expression={$_.ID | Select-Object -Index 0 }},@{Name ="Name"; Expression={$_.Name -join ","}},@{Name="Platform";Expression={$_.'Platform' -join ","}},@{Name="DataType";Expression={$_.'DataType' -join ","}},@{Name="Tactic";Expression={$_.'Tactic' -join ","}},@{Name="Description";Expression={$_.'Description' -join ","}},@{Name="Query";Expression={$_.'Query' -join ","}} | Sort-Object ID | Export-Excel $Excelfile -WorksheetName Templates
